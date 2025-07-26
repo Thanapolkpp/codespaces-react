@@ -1,0 +1,140 @@
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    /* Vibrant, gender-neutral background gradient */
+    background: linear-gradient(135deg, #FFD700, #FF69B4, #8A2BE2); /* Gold, HotPink, BlueViolet */
+    background-size: 400% 400%; /* For animation */
+    animation: gradientAnimation 15s ease infinite; /* Smooth background animation */
+    color: #333;
+}
+
+/* Keyframe animation for background */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container for the BMI Calculator */
+.bmi-container {
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white for vibrancy */
+    padding: 35px 45px;
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    text-align: center;
+    max-width: 500px; /* Slightly wider */
+    width: 90%;
+    backdrop-filter: blur(5px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+}
+
+/* Heading Styles */
+h1 {
+    color: #4b0082; /* Indigo/Deep Purple - remains a strong color */
+    margin-bottom: 30px;
+    font-size: 2.5em; /* Larger heading */
+    font-weight: 700; /* Bolder */
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Subtle text shadow */
+}
+
+/* Input Field Styles */
+input[type="text"] {
+    width: calc(100% - 24px); /* Account for padding */
+    padding: 15px; /* More padding */
+    margin-bottom: 25px;
+    border: none; /* No default border */
+    border-radius: 12px; /* More rounded */
+    font-size: 1.15em; /* Slightly larger font */
+    outline: none;
+    background-color: #f8f8f8; /* Light grey background for input */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+    transition: all 0.3s ease-in-out;
+    color: #444;
+}
+
+input[type="text"]:focus {
+    background-color: #ffffff; /* White on focus */
+    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.3), inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Glow effect on focus */
+    border: 1px solid #8a2be2; /* BlueViolet border on focus */
+}
+
+/* Label/Text before inputs */
+.bmi-input-label {
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 1.2em; /* Larger label font */
+    color: #555;
+    font-weight: 600; /* Bolder label */
+    padding-left: 5px; /* Align with input */
+}
+
+/* Button Styles */
+button {
+    background: linear-gradient(45deg, #6a5acd, #8a2be2, #FF69B4); /* Enhanced gradient with pink */
+    color: white;
+    padding: 16px 30px; /* More padding */
+    border: none;
+    border-radius: 30px; /* More rounded, pill-like */
+    font-size: 1.3em; /* Larger button text */
+    cursor: pointer;
+    transition: all 0.4s ease-in-out; /* Slower transition */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Stronger shadow */
+    letter-spacing: 0.8px;
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase text */
+}
+
+button:hover {
+    background: linear-gradient(45deg, #8a2be2, #FF69B4, #6a5acd); /* Reverse gradient on hover */
+    transform: translateY(-3px) scale(1.02); /* More pronounced lift and slight scale */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* BMI Result Text */
+p {
+    font-size: 1.4em; /* Larger result text */
+    margin-top: 30px;
+    color: #2e8b57; /* SeaGreen - remains positive */
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.05);
+}
+
+/* BMI Category Headings */
+.bmi-result-heading {
+    font-size: 2em; /* Larger category heading */
+    margin-top: 25px;
+    font-weight: 800; /* Even bolder */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Image Styles */
+.bmi-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* More rounded image corners */
+    margin-top: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+    transition: transform 0.3s ease;
+}
+
+.bmi-image:hover {
+    transform: scale(1.03); /* Slightly enlarge image on hover */
+}
+
+/* Specific colors for BMI categories - unchanged as they are effective */
+.underweight h1 { color: #ff8c00; } /* DarkOrange */
+.normal-weight h1 { color: #2e8b57; } /* SeaGreen */
+.overweight h1 { color: #dc143c; } /* Crimson */
+.obesity h1 { color: #8b0000; } /* DarkRed */

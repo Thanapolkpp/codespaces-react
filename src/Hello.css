@@ -1,0 +1,19 @@
+#email{
+    text-decoration: underline;
+}
+.Box{
+    border: 3px solid rgb(0, 255, 149);
+}
+.yellow-bg{
+        background-color: yellow;
+    }
+h1{
+    color:rgb(255, 157, 0);
+    text-align: center;
+    border: 2px solid rgb(255, 157, 0);
+}
+h1:hover{
+    color:azure;
+    background-color:rgb(102, 207, 99);
+}
+

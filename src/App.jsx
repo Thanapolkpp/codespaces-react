@@ -6,11 +6,12 @@ function App() {
       <header className="App-header">
         <img src="Octocat.png" className="App-logo" alt="logo" />
         <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
+          Thanapol khampimpit <span className="heart">💕😘</span> React
         </p>
         <p className="small">
           Edit <code>src/App.jsx</code> and save to reload.
         </p>
+        <p className='small'> Helllo world</p>
         <p>
           <a
             className="App-link"
