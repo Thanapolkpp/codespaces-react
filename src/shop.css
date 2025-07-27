@@ -1,0 +1,228 @@
+/* --- Global Styles & Fonts (Aurora Glass Theme) --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Keyframe animation for background */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* พื้นหลังไล่สีแบบ Aurora เคลื่อนไหวได้ */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #ffffff; /* สีข้อความหลักเป็นสีขาว */
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* --- Header --- */
+header {
+    background: rgba(180, 23, 247, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 1rem 2rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.Head, .motto {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: #FFD700; /* สีทองจากปุ่ม */
+    text-shadow: 0 0 10px #FFD700;
+}
+
+/* --- Main Page Layout --- */
+.page-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Search Box (Glass Style) --- */
+.search-box {
+    text-align: center;
+    margin: 1rem 0 3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.search-box input {
+    width: 50%;
+    max-width: 500px;
+    padding: 12px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    font-size: 1.1em;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-box input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* --- Book List & Items (Glass Container Style) --- */
+.book-contrainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2.5rem;
+}
+
+.book-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.45);
+}
+
+.book-image {
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4));
+}
+
+.book-titel, .book-author, .book-price {
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.book-titel {
+    font-weight: 700;
+    font-size: 1.1rem;
+    flex-grow: 1;
+    margin-bottom: 0.5rem;
+}
+
+.book-author {
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.book-price {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #FFD700; /* สีทองเหมือนปุ่ม */
+    margin-bottom: 1rem;
+}
+
+/* --- Cart Section (Glass Style) --- */
+.cart-section-wrapper {
+    max-width: 700px;
+    margin: 4rem auto 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cart {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.cart-contrainer {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.caet-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.caet-item:last-child {
+    border-bottom: none;
+}
+
+.cart-total {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: right;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    color: #FFD700;
+}
+
+/* --- Button Styles (Gradient Style) --- */
+.bt-addcart, .bt-clarcart {
+    background: linear-gradient(45deg, #8A2BE2, #FF69B4, #FFD700); /* violet-pink-gold gradient */
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    letter-spacing: 0.8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.bt-addcart:hover, .bt-clarcart:hover {
+    background-position: 100% 0; /* ทำให้ Gradient เคลื่อนที่ */
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+.bt-addcart:active, .bt-clarcart:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}

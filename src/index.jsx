@@ -6,14 +6,15 @@ import './index.css';
 import Counter from './counter';
 import reportWebVitals from './reportWebVitals';
 import BMI from './bmi';
-
+import Shop from './shop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/*<Hello name="Thanapol" age={20} />}
     {<Hello name="John" age={30}/> */}
-    <BMI />
+    {/*<BMI /> */}
+    <Shop />
   </React.StrictMode>
 );
 
