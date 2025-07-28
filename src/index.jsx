@@ -5,7 +5,6 @@ import './index.css';
 // import Hello from './Hello';
 import Counter from './counter';
 import reportWebVitals from './reportWebVitals';
-import BMI from './bmi';
 import Shop from './shop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

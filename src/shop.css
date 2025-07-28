@@ -1,228 +1,206 @@
-/* --- Global Styles & Fonts (Aurora Glass Theme) --- */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-/* Keyframe animation for background */
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
+/* Global */
 body {
-    font-family: 'Poppins', sans-serif;
-    /* พื้นหลังไล่สีแบบ Aurora เคลื่อนไหวได้ */
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite;
-    color: #ffffff; /* สีข้อความหลักเป็นสีขาว */
-    margin: 0;
-    line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #edd0dc; /* ชมพูอ่อน */
+  color: #333;
 }
 
-/* --- Header --- */
 header {
-    background: rgba(180, 23, 247, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-    padding: 1rem 2rem;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background: linear-gradient(90deg, #ffc5d9, #cce8ff); /* ชมพู + ฟ้า */
+  color: #1b191b;
+  padding: 10px 20px;
 }
 
-.Head, .motto {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.Head {
+  margin: 5px 0;
+  text-align: center;
+}
+
+.motto {
+  font-size: 0.9em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 nav a {
-    text-decoration: none;
-    color: #ffffff;
-    margin: 0 1rem;
-    padding: 0.5rem 0;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border-bottom: 2px solid transparent;
+  color: rgb(21, 19, 21);
+  text-decoration: none;
+  font-weight: 500;
 }
 
-nav a:hover {
-    color: #FFD700; /* สีทองจากปุ่ม */
-    text-shadow: 0 0 10px #FFD700;
-}
-
-/* --- Main Page Layout --- */
 .page-container {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
 }
 
-/* --- Search Box (Glass Style) --- */
+/* Search box */
 .search-box {
-    text-align: center;
-    margin: 1rem 0 3rem;
-    font-size: 1.1rem;
-    font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .search-box input {
-    width: 50%;
-    max-width: 500px;
-    padding: 12px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 30px;
-    font-size: 1.1em;
-    background-color: rgba(255, 255, 255, 0.15);
-    color: #fff;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(4px);
-    transition: all 0.3s ease;
+  padding: 8px 12px;
+  width: 50%;
+  max-width: 300px;
+  border: 1px solid #ffb6c1; /* ชมพูอ่อน */
+  border-radius: 5px;
 }
 
-.search-box input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.search-box input:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
-    background-color: rgba(255, 255, 255, 0.25);
-}
-
-/* --- Book List & Items (Glass Container Style) --- */
-.book-contrainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 2.5rem;
+/* Books grid */
+.book-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .book-item {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    border-radius: 20px;
-    padding: 1.5rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
+  background: #fff;
+  border: 2px solid #ffe4e1; /* ขอบชมพูอ่อน */
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(255,182,193,0.3); /* เงาชมพูอ่อน */
+  padding: 10px;
+  transition: transform 0.2s ease;
 }
 
 .book-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.45);
+  transform: translateY(-5px);
 }
 
 .book-image {
-    max-width: 100%;
-    height: 200px;
-    object-fit: contain;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4));
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ffe4e1;
 }
 
-.book-titel, .book-author, .book-price {
-    color: #fff;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-}
-
-.book-titel {
-    font-weight: 700;
-    font-size: 1.1rem;
-    flex-grow: 1;
-    margin-bottom: 0.5rem;
+.book-title {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #ff69b4; /* ชมพูเข้ม */
 }
 
 .book-author {
-    color: #e0e0e0;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+  font-size: 0.9em;
+  color: #555;
 }
 
 .book-price {
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: #FFD700; /* สีทองเหมือนปุ่ม */
-    margin-bottom: 1rem;
+  margin: 5px 0;
+  color: #00bfff; /* ฟ้า */
 }
 
-/* --- Cart Section (Glass Style) --- */
-.cart-section-wrapper {
-    max-width: 700px;
-    margin: 4rem auto 2rem;
-    display: flex;
-    justify-content: flex-end;
+.bt-addcart {
+  background-color: #ffb347; /* เหลืองพาสเทล */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.bt-addcart:hover {
+  background-color: #ffa500;
+}
+
+/* Cart dropdown */
+.cart-dropdown {
+  position: relative;
+}
+
+.cart-button {
+  background-color: #ffb347; /* เหลืองพาสเทล */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.cart-button:hover {
+  background-color: #ffa500;
+}
+
+.cart-container {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 5px;
+  background-color: #fff0f5; /* ชมพูอ่อน */
+  min-width: 250px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border: 1px solid #ffc5d9;
+  border-radius: 8px;
+  padding: 10px;
 }
 
 .cart {
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-    margin-bottom: 1.5rem;
-    text-align: left;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #ff69b4; /* ชมพูเข้ม */
 }
 
-.cart-contrainer {
-    background: rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    border-radius: 20px;
-    padding: 2rem;
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
-.caet-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 0.25rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+.book-image-cart img {
+  width: 40px;
+  height: auto;
+  margin-right: 5px;
+  border-radius: 4px;
 }
 
-.caet-item:last-child {
-    border-bottom: none;
+.book-title-cart {
+  flex: 1;
+  font-size: 0.9em;
+}
+
+.book-price-cart {
+  font-size: 0.9em;
+  color: #00bfff; /* ฟ้า */
 }
 
 .cart-total {
-    font-size: 1.3rem;
-    font-weight: 700;
-    text-align: right;
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    color: #FFD700;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: right;
+  color: #ff69b4; /* ชมพูเข้ม */
 }
 
-/* --- Button Styles (Gradient Style) --- */
-.bt-addcart, .bt-clarcart {
-    background: linear-gradient(45deg, #8A2BE2, #FF69B4, #FFD700); /* violet-pink-gold gradient */
-    color: white;
-    padding: 14px 25px;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: all 0.4s ease-in-out;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-    letter-spacing: 0.8px;
-    font-weight: bold;
-    text-transform: uppercase;
-    width: 100%;
+.bt-clearcart {
+  background-color: #ff6b81; /* ชมพู */
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 5px;
+  width: 100%;
+  font-weight: bold;
 }
 
-.bt-addcart:hover, .bt-clarcart:hover {
-    background-position: 100% 0; /* ทำให้ Gradient เคลื่อนที่ */
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
-}
-
-.bt-addcart:active, .bt-clarcart:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+.bt-clearcart:hover {
+  background-color: #ff4757;
 }
